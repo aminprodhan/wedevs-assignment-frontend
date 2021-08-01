@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "~/*": ["./*"],
+            "@/*": ["./*"],
+            "~~/*": ["./*"],
+            "@@/*": ["./*"],
+            "@/repositories/*": ["repositories/*"],
+            "@/store/*": ["store/*"],
+            "@/utilities/*": ["utilities/*"]
+        }
+    }
+}
