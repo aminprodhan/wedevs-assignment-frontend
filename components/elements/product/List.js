@@ -8,7 +8,7 @@ import { EditOutlined,DeleteOutlined } from '@ant-design/icons';
 import ProductRepository from '~/repositories/ProductRepository';
 import { setNotification } from '~/components/shared/Notification';
 import Image from 'next/image';
-import { baseUrl, baseUrlApi } from '~/repositories/Repository';
+import {baseUrlDoc } from '~/repositories/Repository';
 
 const { Column, ColumnGroup } = Table;
 const confirm = Modal.confirm;
@@ -68,7 +68,7 @@ const List=(props)=>{
               <Avatar 
                   size="large"
                   maxStyle={{ color: '#f56a00', backgroundColor: '#fde3cf' }}
-                  src={`${baseUrl}/products/${record.image}`} />
+                  src={`${baseUrlDoc}/products/${record.image}`} />
             )} />
             <Column title="Title" dataIndex="title" key="title" />
             <Column title="Price" dataIndex="price" key="price" />

@@ -15,8 +15,8 @@ const StyleSheets = () => (
         <meta name="format-detection" content="telephone=no" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="author" content="nouthemes" />
-        <meta name="keywords" content="Martfury, React, eCommerce, Template" />
-        <meta name="description" content="Martfury - React eCommerce Template" />
+        <meta name="keywords" content="Wedevs Crud" />
+        <meta name="description" content="Wedevs Crud" />
         <link
             href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600,700&amp;amp;subset=latin-ext"
             rel="stylesheet"
@@ -34,7 +34,9 @@ const StyleSheets = () => (
         <link
             rel="stylesheet"
             type="text/css"
-            href="/static/css/bootstrap.min.css"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
+            rel="stylesheet" 
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"
         />
         <link
             rel="stylesheet"
