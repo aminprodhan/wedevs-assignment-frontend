@@ -14,6 +14,8 @@ class ProductRepository {
                     return response.data.getRecords;
                 })
                 .catch((error) => {
+                    if(typeof error.message != 'undefined')
+                        return {error : error.message};
                     return {error : JSON.stringify(error)};
                 });
         return reponse;
@@ -30,6 +32,8 @@ class ProductRepository {
                 return response.data.getRecords;
             })
             .catch((error) => {
+                if(typeof error.message != 'undefined')
+                    return {error : error.message};
                 return {error : JSON.stringify(error)};
             });
         return reponse;
@@ -45,7 +49,9 @@ class ProductRepository {
                 return response.data.getRecords;
             })
             .catch((error) => {
-                return null;
+                if(typeof error.message != 'undefined')
+                    return {error : error.message};
+                return {error : JSON.stringify(error)};
             });
         return reponse;
     }

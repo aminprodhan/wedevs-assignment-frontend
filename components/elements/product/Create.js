@@ -96,7 +96,14 @@ const Create=(props)=>{
         });
         const API = await ProductRepository.save(modalInfo);
         if(typeof API.error != 'undefined')
-            setNotification("warning",API.error);
+            {
+                setNotification("warning",API.error);
+                setModalInfo({
+                    ...modalInfo,
+                    loading:false,
+                });
+                callback();  
+            }
         else{
             dispatch(getProductsSuccess(API));
             setNotification("success","success");

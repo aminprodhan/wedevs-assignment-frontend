@@ -38,7 +38,10 @@ const List=(props)=>{
     const confirmHandleOk=async(callback,item)=>{
       const API = await ProductRepository.delete(item);
       if(typeof API.error != 'undefined')
-            setNotification("warning",API.error);
+            {
+              setNotification("warning",API.error);
+              callback();   
+            }
         else{
             dispatch(getProductsSuccess(API));
             setNotification("success","success");
@@ -53,7 +56,9 @@ const List=(props)=>{
           onOk() {
             return new Promise((resolve, reject) => 
             {
-              confirmHandleOk(function(res){reject()},item);
+              confirmHandleOk(function(res){
+                reject()
+              },item);
             }).catch(() => console.log('Oops errors!'));
           },
           onCancel() {},
